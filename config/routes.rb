@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # (http://localhost:3000/demo/index) renders the hello world page
   get 'demo/index'
   get 'demo/hello'
+  get 'demo/other_hello'
+  get 'demo/google'
 
   # root route, takes you to the root of the page
   # (http://localhost:3000/) renders the hello world page
