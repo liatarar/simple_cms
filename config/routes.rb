@@ -1,14 +1,28 @@
 Rails.application.routes.draw do
 
-  # (http://localhost:3000/demo/index) renders the hello world page
+  root 'demo#index'
+
   get 'demo/index'
   get 'demo/hello'
   get 'demo/other_hello'
   get 'demo/google'
 
+  resources :subjects do
+    member do
+      get :delete
+    end
+  end
+
+  # get 'subjects/index'
+  # get 'subjects/show'
+  # get 'subjects/new'
+  # get 'subjects/edit'
+  # get 'subjects/delete'
+
+  # (http://localhost:3000/demo/index) renders the hello world page
+
   # root route, takes you to the root of the page
   # (http://localhost:3000/) renders the hello world page
-  # root 'demo#index'
 
   # default route, picks up index action in controller by default
   #  (http://localhost:3000/demo/) renders the hello world page
